@@ -29,9 +29,9 @@ return [
     'router'    => [
         'routes' => [
             'home' => [
-                'type'      => 'Zend\Mvc\Router\Http\Literal',
+                'type'      => 'Literal',
                 'options'   => [
-                    'route'     => '/',
+                    'route'     => '/mot',
                     'defaults'  => [
                         'controller'    => 'Mot\Controller\Index',
                         'action'        => 'index'
@@ -39,9 +39,9 @@ return [
                 ]
             ],
             'mot' => [
-                'type'      => 'Zend\Mvc\Router\Http\Literal',
+                'type'      => 'Literal',
                 'options'   => [
-                    'route'     => '/megamitch/mot',
+                    'route'     => '/mot',
                     'defaults'  => [
                         'controller'    => 'Mot\Controller\Index',
                         'action'        => 'index'

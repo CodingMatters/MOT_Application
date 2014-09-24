@@ -28,16 +28,6 @@ return [
     'console'   => [], //routing configuration for CLI modules
     'router'    => [
         'routes' => [
-            'home' => [
-                'type'      => 'Literal',
-                'options'   => [
-                    'route'     => '/mot',
-                    'defaults'  => [
-                        'controller'    => 'Mot\Controller\Index',
-                        'action'        => 'index'
-                    ]
-                ]
-            ],
             'mot' => [
                 'type'      => 'Literal',
                 'options'   => [

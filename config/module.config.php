@@ -44,8 +44,8 @@ return [
         'not_found_template'        => 'error/404',
         'exception_template'        => 'error/index',
         'template_map'              => [
-            'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-            'template/footer'           => __DIR__ . '/../view/layout/partial/footer.phtml',
+            'mot-layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
+            'mot-template/footer'           => __DIR__ . '/../view/layout/partial/footer.phtml',
             'mot/index/index' => __DIR__ . '/../view/mot/index/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
@@ -55,6 +55,6 @@ return [
         ],
     ],
     'module_layouts' => [
-        'Mot' => 'layout/layout'
+        'Mot' => 'mot-layout/layout'
     ]
 ];

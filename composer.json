@@ -1,5 +1,5 @@
 {
-    "name": "codingmatters/mot-application",
+    "name": "megamitch/mot-application",
     "description": "Application module for Mega Mitch Credit, Inc. Office Tool (MegaOfficeTool) Platform",
     "license": "MIT",
     "type": "project",
@@ -9,7 +9,7 @@
         "application",
         "zf2"
     ],
-    "homepage": "http://demo.gabbydgab.com/megamitch/mot",
+    "homepage": "http://megamitch.ph",
     "authors": [
         {
             "name": "Gab Amba",

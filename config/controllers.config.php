@@ -27,8 +27,5 @@
 return [
     'invokables' => [
         'Mot\Controller\Index' => 'Mot\Controller\IndexController',            
-    ],
-    'aliases' => [
-        //'Application\Controller\Index' => 'Mot\Controller\Index'
     ]
 ];

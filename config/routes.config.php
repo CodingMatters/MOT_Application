@@ -37,16 +37,6 @@ return [
                         'action'        => 'index'
                     ]
                 ]
-            ],
-            'maintenance' => [
-                'type'      => 'Zend\Mvc\Router\Http\Literal',
-                'options'   => [
-                    'route'     => '/under-construction',
-                    'defaults'  => [
-                        'controller'    => 'Mot\Controller\Index',
-                        'action'        => 'maintenance'
-                    ]
-                ]
             ]
         ]
     ]

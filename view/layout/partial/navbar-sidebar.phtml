@@ -1,0 +1,41 @@
+<div class="page-sidebar" id="main-menu">
+    <div class="page-sidebar-wrapper" id="main-menu-wrapper">
+        <div class="user-info-wrapper">
+            <div class="profile-wrapper"> 
+                <img src="<?php echo $this->basePath(). "/assets/webarch/img/profiles/avatar.jpg";?>"  
+                     alt="" data-src="<?php echo $this->basePath(). "/assets/webarch/img/profiles/avatar.jpg";?>" 
+                     data-src-retina="<?php echo $this->basePath(). "/assets/webarch/img/profiles/avatar2x.jpg";?>" 
+                     width="69" height="69" /> 
+            </div>
+            <div class="user-info">
+                <div class="greeting">LastName</div>
+                <div class="username">Nick Name</div>
+                <div class="status">
+                    <a href=""><i class="fa fa-info-circle">&nbsp;View Profile</i></a>
+                </div>
+            </div>
+            <div class="divider"></div>
+        </div>
+        <ul>
+            <li class="start active open "> <a href="<?php echo $this->url('mot'); ?>" > <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span> </a>
+                </li>
+            <li class=""> <a href="#"> <i class="icon-custom-chart"></i> <span class="title">Charts</span><span class="arrow"></span> </a>
+                <ul class="sub-menu">
+                    <li > <a href="#"> Branch/Company KPI </a> </li>
+                    <li > <a href="#"> Credit Officer Sales KPI </a> </li>
+                </ul>
+            </li>
+            <li class=""> <a href="#"> <i class="fa fa-file-text-o"></i>  <span class="title">Attendance</span></a></li>
+            <li class=""> 
+                <a href="javascript:;"> <i class="fa fa-users"></i> <span class="title">User Management</span></a>
+            </li>
+            <li class=""> 
+                <a href="javascript:;"> <i class="fa fa-gears"></i> <span class="title">System Admin</span></a>
+            </li>
+            <li class=""> 
+                <a href="javascript:;"> <i class="fa fa-power-off"></i> <span class="title">Logout</span></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div>

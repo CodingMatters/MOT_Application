@@ -44,4 +44,14 @@ class IndexController extends AbstractActionController
     {
         return new ViewModel();
     }
+    
+    public function viewEmployeesAction()
+    {
+        return new ViewModel();
+    }
+    
+    public function viewProfileAction()
+    {
+        
+    }
 }

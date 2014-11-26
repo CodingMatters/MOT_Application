@@ -15,29 +15,9 @@
             </div>
             <div class="divider"></div>
         </div>
-        <ul>
-            <li class="start active open "> 
-                <a href="<?php echo $this->url('mot'); ?>" > 
-                    <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span> 
-                </a>
-            </li>
-<!--            <li> <a href="#"> <i class="icon-custom-chart"></i> <span class="title">Charts</span><span class="arrow"></span> </a>
-                <ul class="sub-menu">
-                    <li > <a href="#"> Branch/Company KPI </a> </li>
-                    <li > <a href="#"> Credit Officer Sales KPI </a> </li>
-                </ul>
-            </li>
-            <li> <a href="#"> <i class="fa fa-file-text-o"></i>  <span class="title">Attendance</span></a></li>-->
-            <li> 
-                <a href="<?php echo $this->url('mot/members');?>"> <i class="fa fa-users"></i> <span class="title">Manage Employees</span></a>
-            </li>
-<!--            <li> 
-                <a href="#"> <i class="fa fa-gears"></i> <span class="title">System Admin</span></a>
-            </li>
-            <li> 
-                <a href="<?php // echo $this->url('zfcuser/logout');?>"> <i class="fa fa-power-off"></i> <span class="title">Logout</span></a>
-            </li>-->
-        </ul>
+        <?php 
+            echo $this->navigation("navigation")->menu()->setPartial("template/navigation");
+        ?>
         <div class="clearfix"></div>
     </div>
 </div>

@@ -25,14 +25,18 @@
  */
 
 return [
-    'abstract_factories' => [
-        'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
-        'Zend\Log\LoggerAbstractServiceFactory',
-    ],
-    'aliases' => [
-        'translator' => 'MvcTranslator',
-    ],
-    'factories' => [
-        'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
+    'navigation' => [
+        'default' => [
+            'dashboard' => [
+                'label' => 'Dashboard',
+                'route' =>  'mot',
+                'icon' => "icon-custom-home"
+            ],
+            'manage-employee' => [
+                'label' => "Manage Employees",
+                'route' => "mot/members",
+                'icon' => "fa fa-users"
+            ]
+        ]
     ]
 ];

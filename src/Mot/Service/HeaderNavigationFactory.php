@@ -24,17 +24,19 @@
  * THE SOFTWARE.
  */
 
-return [
-    'abstract_factories' => [
-        'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
-        'Zend\Log\LoggerAbstractServiceFactory',
-    ],
-    'aliases' => [
-        'translator' => 'MvcTranslator',
-    ],
-    'factories' => [
-        'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
-        'sidebar' => 'Mot\Service\SidebarNavigationFactory',
-        'header' => 'Mot\Service\HeaderNavigationFactory',
-    ]
-];
+namespace Mot\Service;
+
+use Zend\Navigation\Service\AbstractNavigationFactory;
+
+/**
+ * Mot\Service\HeaderNavigationFactory
+ * 
+ * @package Mot\Service
+ */
+class HeaderNavigationFactory extends AbstractNavigationFactory
+{
+    public function getName()
+    {
+        return 'header';
+    }
+}

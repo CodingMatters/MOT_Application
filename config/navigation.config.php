@@ -26,7 +26,7 @@
 
 return [
     'navigation' => [
-        'default' => [
+        'sidebar' => [
             'dashboard' => [
                 'label' => 'Dashboard',
                 'route' =>  'mot',
@@ -36,6 +36,13 @@ return [
                 'label' => "Manage Employees",
                 'route' => "mot/members",
                 'icon' => "fa fa-users"
+            ]
+        ],
+        "header" => [
+            "home" => [
+                'label' => "Dashboard",
+                'route' => "mot",
+                'icon' => "fa fa-home fa-lg"
             ]
         ]
     ]

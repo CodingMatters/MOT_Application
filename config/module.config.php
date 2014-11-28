@@ -46,9 +46,10 @@ return [
         'template_map'              => [
             'mot-layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
             'mot-template/footer'           => __DIR__ . '/../view/layout/partial/footer.phtml',
-            'template/navigation'           => __DIR__ . '/../view/layout/partial/navigation.phtml',
-            'mot-template/navbar-header'           => __DIR__ . '/../view/layout/partial/navbar-header.phtml',
-            'mot-template/navbar-sidebar'           => __DIR__ . '/../view/layout/partial/navbar-sidebar.phtml',
+            'template/navigation/sidebar'           => __DIR__ . '/../view/layout/template/navigation/sidebar.phtml',
+            'template/navigation/header'           => __DIR__ . '/../view/layout/template/navigation/header.phtml',
+            'partial/navigation/header'           => __DIR__ . '/../view/layout/partial/navigation/header.phtml',
+            'partial/navigation/sidebar'           => __DIR__ . '/../view/layout/partial/navigation/sidebar.phtml',
             'mot/index/index' => __DIR__ . '/../view/mot/index/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',

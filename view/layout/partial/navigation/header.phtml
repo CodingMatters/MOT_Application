@@ -17,18 +17,9 @@
                     <div class="iconset top-menu-toggle-dark"></div>
                     </a> </li>
                 </ul>
-                <ul class="nav quick-section">
-                    <li class="quicklinks"> 
-                        <a href="<?php echo $this->url('mot'); ?>" class="" ><i class="fa fa-home fa-lg">&nbsp;Dashboard</i></a> 
-                    </li>
-<!--                    <li class="quicklinks"> <span class="h-seperate"></span></li>
-                    <li class="quicklinks">
-                        <a href="#" target="__blank">
-                            <i class="fa fa-info-circle fa-2x">&nbsp;&nbsp;Notification</i>
-                        </a>
-                    </li>
-                    <li class="quicklinks"> <span class="h-seperate"></span></li>-->
-                </ul>
+                <?php 
+                    echo $this->navigation("header")->menu()->setPartial("template/navigation/header");
+                ?>
             </div>
             <div class="pull-right">
               <div class="chat-toggler">

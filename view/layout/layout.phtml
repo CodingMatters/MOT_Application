@@ -57,14 +57,17 @@
         ?>
     </head>
     <body>
-        <?php echo $this->partial('partial/navigation/header', []); ?>
+        <?php echo $this->partial('partial/navigation/header'); ?>
         <div class="page-container row-fluid">
-            <?php echo $this->partial('partial/navigation/sidebar', []); ?>
+            <?php echo $this->partial('partial/navigation/sidebar'); ?>
             <div class="page-content">
                 <div class="content">
                     <div class="container-fluid">
                         <?php echo $this->content; ?>
                     </div>
+                </div>
+                <div class="container-fluid">
+                    <?php echo $this->partial('template/footer'); ?>
                 </div>
             </div>
         </div>

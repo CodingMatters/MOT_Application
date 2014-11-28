@@ -45,7 +45,7 @@ return [
         'exception_template'        => 'error/index',
         'template_map'              => [
             'mot-layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-            'mot-template/footer'           => __DIR__ . '/../view/layout/partial/footer.phtml',
+            'template/footer'           => __DIR__ . '/../view/layout/partial/footer.phtml',
             'template/navigation/sidebar'           => __DIR__ . '/../view/layout/template/navigation/sidebar.phtml',
             'template/navigation/header'           => __DIR__ . '/../view/layout/template/navigation/header.phtml',
             'partial/navigation/header'           => __DIR__ . '/../view/layout/partial/navigation/header.phtml',

@@ -34,12 +34,12 @@ $container = $this->container;
             }
             if ($access) :
                 ?>
-                <li class="dropdown<?php if ($page->isActive(true)) echo ' active' ?>">
+                <li class="quicklinks <?php if ($page->isActive(true)) echo 'active' ?>">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <?php if ($page->get("icon") !== ""): ?>
-                            <span class="<?php echo $page->get("icon"); ?>"></span>
+                            <i class="<?php echo $page->get("icon"); ?>"></i>
                         <?php endif; ?>
-                        <?php echo $page->getLabel() ?>
+                        <span class="title"><?php echo $page->getLabel() ?></span>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
@@ -51,21 +51,22 @@ $container = $this->container;
                                     continue;
                                 endif;
                                 ?>
-                            <li<?php if ($child->isActive()) echo ' class="active"' ?>>
+                            <li<?php echo ($page->isActive()) ? ' class="active quicklinks"': ' class = quicklinks'?>>
                                 <a 
                                     href="<?php echo $child->getHref() ?>"
                                     <?php if ($child->getTarget() != ""): ?>
                                         target="<?php echo $child->getTarget(); ?>"
                                     <?php endif; ?> >
                                         <?php if ($child->get("icon") !== ""): ?>
-                                        <span class="<?php echo $child->get("icon"); ?>"></span>
+                                        <i class="<?php echo $child->get("icon"); ?>"></i>
                                     <?php endif; ?>
-                                    <?php echo $child->getLabel() ?>
+                                    <span class="title"><?php echo $child->getLabel() ?></span>
                                 </a>
                             </li>
                         <?php endforeach ?>
                     </ul>
                 </li>   
+                <li class="quicklinks"> <span class="h-seperate"></span></li>
             <?php endif; ?>
         <?php endif ?>
     <?php endforeach ?>

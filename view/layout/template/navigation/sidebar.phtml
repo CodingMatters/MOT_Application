@@ -2,13 +2,13 @@
 /* @var $container Zend\Navigation\Navigation */
 $container = $this->container;
 ?>
-<ul>
+<ul class="nav nav-pills nav-stacked">
     <?php foreach ($container as $page): ?>
         <?php if (!$this->navigation()->accept($page)) continue; ?>
         <?php /* @var $page Zend\Navigation\Page\Mvc */ ?>
         <?php $hasChildren = $page->hasPages() ?>
         <?php if (!$hasChildren): ?>
-            <li<?php if ($page->isActive()) echo ' class="start active open"' ?>>
+            <li<?php if ($page->isActive()) echo ' class="active"' ?>>
                 <a 
                     href="<?php echo $page->getHref() ?>"
                     <?php if ($page->getTarget() != ""): ?>
@@ -32,15 +32,14 @@ $container = $this->container;
             }
             if ($access) :
                 ?>
-                <li class="dropdown<?php if ($page->isActive(true)) echo ' active' ?>">
+                <li class='parent <?php if ($page->isActive()) echo ' active' ?>'>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <?php if ($page->get("icon") !== ""): ?>
                             <i class="<?php echo $page->get("icon"); ?>"></i>
                         <?php endif; ?>
                         <span class="title"><?php echo $page->getLabel() ?></span>
-                        <b class="caret"></b>
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="children">
                         <?php foreach ($page->getPages() as $child): ?>
                             <?php if (!$this->navigation()->accept($child)) continue; ?>
                             <?php if ($child->get("separator") === true): ?>
@@ -55,9 +54,6 @@ $container = $this->container;
                                     <?php if ($child->getTarget() != ""): ?>
                                         target="<?php echo $child->getTarget(); ?>"
                                     <?php endif; ?> >
-                                        <?php if ($child->get("icon") !== ""): ?>
-                                        <i class="<?php echo $child->get("icon"); ?>"></i>
-                                    <?php endif; ?>
                                     <span class="title"><?php echo $child->getLabel() ?></span>
                                 </a>
                             </li>

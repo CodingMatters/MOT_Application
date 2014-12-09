@@ -30,7 +30,7 @@ return [
             'dashboard' => [
                 'label' => 'Dashboard',
                 'route' =>  'mot',
-                'icon' => "icon-custom-home"
+                'icon' => "fa fa-home"
             ],
             'manage-employee' => [
                 'label' => "Manage Employees",

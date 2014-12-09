@@ -1,41 +1,27 @@
-<div class="header navbar navbar-inverse ">
-    <div class="navbar-inner">
-        <div class="header-seperation">
-            <a href="<?php echo $this->url('mot'); ?>"><img src="<?php echo $this->basePath(). "/assets/megamitch-mot/img/mot-logo.png";?>" class="logo" alt=""  data-src="<?php echo $this->basePath(). "/assets/megamitch-mot/img/mot-logo.png";?>" data-src-retina="<?php echo $this->basePath(). "/assets/megamitch-mot/img/mot-logo.png";?>" width="121" height="20"/></a>
-          <ul class="nav pull-left notifcation-center" id="main-menu-toggle-wrapper" style="display:none">
-              <li class="dropdown">
-                  <a id="main-menu-toggle" href="#main-menu"  class="" >
-                      <div class="iconset top-menu-toggle-white"></div>
-                  </a> 
-              </li>
-          </ul>
+<div class="headerwrapper">
+    <div class="header-left">
+        <a href="<?php echo $this->url('mot'); ?>"><img src="<?php echo $this->basePath(). "/assets/mot/img/mot-logo.png";?>" class="logo" alt=""  data-src="<?php echo $this->basePath(). "/assets/mot/img/mot-logo.png";?>" data-src-retina="<?php echo $this->basePath(). "/assets/mot/img/mot-logo.png";?>" width="92" height="20"/></a>
+        <div class="pull-right">
+            <a href="#" class="menu-collapse">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
-        <div class="header-quick-nav" >
-            <div class="pull-left">
-                <ul class="nav quick-section">
-                  <li class="quicklinks"> <a href="#" class="" id="layout-condensed-toggle" >
-                    <div class="iconset top-menu-toggle-dark"></div>
-                    </a> </li>
+    </div>
+    <div class="header-right">
+         <div class="pull-left">
+            <?php 
+//                echo $this->navigation("header")->menu()->setPartial("template/navigation/header");
+            ?>
+        </div>
+        <div class="pull-right">
+            <div class="btn-group btn-group-option">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-lock"></i>
+                </button>               
+                <ul class="dropdown-menu pull-right" role="menu">
+                  <li><a href="<?php // echo $this->url("zfcuser/logout"); ?>"><i class="glyphicon glyphicon-log-out"></i>Sign Out</a></li>
                 </ul>
-                <?php 
-                    echo $this->navigation("header")->menu()->setPartial("template/navigation/header");
-                ?>
-            </div>
-            <div class="pull-right">
-              <div class="chat-toggler">
-                <div class="user-details">
-                    <div class="">
-                        <a href="<?php // echo $this->url("zfcuser/logout"); ?>"> <i class="fa fa-power-off">&nbsp;&nbsp;Logout</i></a>
-                    </div>
-                </div>
-              </div>
             </div>
         </div>
     </div>
 </div>
-
-    
-      
-      
-      
-      

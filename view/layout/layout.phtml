@@ -62,13 +62,13 @@
                 </div>                
             </div>
         </section>       
-        <?php echo $this->inlineScript()
+        <?php echo $this->inlineScript()           
+            ->prependFile($this->basePath() . '/assets/mot/js/custom.js')
+            ->prependFile($this->basePath() . '/assets/mot/js/holder.js')
             ->prependFile($this->basePath() . '/assets/bootstrap/js/tab.js')
             ->prependFile($this->basePath() . '/assets/bootstrap/js/tooltip.js')
             ->prependFile($this->basePath() . '/assets/bootstrap/js/popover.js')
-            ->prependFile($this->basePath() . '/assets/bootstrap/js/bootstrap.js')
-            ->prependFile($this->basePath() . '/assets/mot/js/custom.js')
-            ->prependFile($this->basePath() . '/assets/mot/js/holder.js')
+            ->prependFile($this->basePath() . '/assets/bootstrap/js/bootstrap.min.js')
             ->prependFile($this->basePath() . '/assets/jquery/jquery.min.js');
         ?>
     </body>

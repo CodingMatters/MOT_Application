@@ -32,7 +32,7 @@ $container = $this->container;
             }
             if ($access) :
                 ?>
-                <li class='parent <?php if ($page->isActive()) echo ' active' ?>'>
+                <li class='parent <?php if ($page->isActive()) echo ' active nav-hover' ?>'>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <?php if ($page->get("icon") !== ""): ?>
                             <i class="<?php echo $page->get("icon"); ?>"></i>

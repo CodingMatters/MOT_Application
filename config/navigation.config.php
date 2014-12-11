@@ -31,11 +31,6 @@ return [
                 'label' => 'Dashboard',
                 'route' =>  'mot',
                 'icon' => "fa fa-home"
-            ],
-            'manage-employee' => [
-                'label' => "Manage Employees",
-                'route' => "mot/members",
-                'icon' => "fa fa-users"
             ]
         ],
         "header" => [

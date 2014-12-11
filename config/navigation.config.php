@@ -26,6 +26,13 @@
 
 return [
     'navigation' => [
+        'default' => [
+            'dashboard' => [
+                'label' => 'Dashboard',
+                'route' =>  'mot',
+                'icon' => "fa fa-home"
+            ]
+        ],
         'sidebar' => [
             'dashboard' => [
                 'label' => 'Dashboard',
@@ -37,7 +44,7 @@ return [
             "home" => [
                 'label' => "Dashboard",
                 'route' => "mot",
-                'icon' => "fa fa-home fa-lg"
+                'icon' => "fa fa-home"
             ]
         ]
     ]

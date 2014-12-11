@@ -36,6 +36,19 @@ return [
                         'controller'    => 'Mot\Controller\Index',
                         'action'        => 'index'
                     ]
+                ],
+                'may_terminate' => true,
+                'child_routes' => [
+                    'dashboard' => [
+                        'type' => 'Literal',
+                        'options' => [
+                            'route' => '/',
+                            'defaults' => [
+                                'controller'    => 'Mot\Controller\Index',
+                                'action' => 'index'
+                            ]
+                        ]
+                    ]
                 ]
             ]
         ]

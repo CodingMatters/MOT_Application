@@ -37,6 +37,7 @@
             ->setAutoEscape(false);
         ?>
         <?php echo $this->headLink(['rel' => 'shortcut icon', 'href' => $this->basePath() . '/img/favicon.ico'])
+            ->prependStylesheet($this->basePath() . '/assets/mot/css/style.override.css')
             ->prependStylesheet($this->basePath() . '/assets/mot/css/style.default.css')
             ->prependStylesheet($this->basePath() . '/assets/font-awesome/css/font-awesome.css')
             ->prependStylesheet($this->basePath() . '/assets/bootstrap/css/bootstrap-theme.min.css')
@@ -53,12 +54,7 @@
                     <?php echo $this->partial('partial/navigation/sidebar'); ?>
                 </div>
                 <div class="mainpanel">
-                    <div class="pageheader">
-                        <?php echo $this->partial('partial/navigation/breadcrumbs'); ?>
-                    </div>
-                    <div class="contentpanel">
-                        <?php echo $this->content; ?>
-                    </div>
+                    <?php echo $this->content; ?>
                 </div>                
             </div>
         </section>       

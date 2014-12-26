@@ -9,106 +9,122 @@
             ->prependFile($this->basePath() . '/assets/mot/js/pace.min.js')
             ->prependFile($this->basePath() . '/assets/mot/js/modernizr.min.js');
 ?>
-
-
-<div class="row">
-    <div class="col-sm-4 col-md-3 col-lg-3">
-        <div class="text-center">
-            <img class="img-circle image-offline image-responsive img-profile" width="180" height="180" src="<?php echo $this->basePath(). "/assets/webarch/img/profile-pic-big.png";?>" alt=""/>
-            <h4 class="profile-name mb5"><strong>Taojo,</strong> Josephine Dalangin</h4>
-            <div>Executive Assistant</div>
-        </div>
-        <div class="mb20"></div>
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                <h6 class="panel-title"><strong>Mega Mitch Personnel Info:</strong></h6>
+<div class="pageheader">
+     <div class="media">
+         <div class="pageicon pull-left">
+             <i class="fa fa-user"></i>
+         </div>
+         <div class="media-body" style="padding-left: 5px">
+             <ul class="breadcrumb">
+                 <li>
+                     <a href="#"><i class="glyphicon glyphicon-home"></i></a>
+                 </li>
+                 <li>My Profile</li>
+             </ul>
+             <h4>My Profile</h4>
+         </div>
+     </div>
+</div>
+<div class="contentpanel">
+    <div class="row">
+        <div class="col-sm-4 col-md-3 col-lg-3">
+            <div class="text-center">
+                <img class="img-circle image-offline image-responsive img-profile" width="180" height="180" src="<?php echo $this->basePath(). "/assets/webarch/img/profile-pic-big.png";?>" alt=""/>
+                <h4 class="profile-name mb5"><strong>Taojo,</strong> Josephine Dalangin</h4>
+                <div>Executive Assistant</div>
             </div>
-            <div class="panel-body">
-                <span><i class="fa fa-barcode"></i>&nbsp;:&nbsp;01-0037</span> <br>
-                <span><i class="fa fa-envelope-o"></i>&nbsp;:&nbsp;josephine.taojo@megamitch.com</span> <br>
-                <span><i class="fa fa-calendar"></i>&nbsp;:&nbsp;2014-04-11</span> <br>
-                <span><i class="fa fa-mobile fa-2x"></i>&nbsp;:&nbsp;0917-505-8928</span>
+            <div class="mb20"></div>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h6 class="panel-title"><strong>Mega Mitch Personnel Info:</strong></h6>
+                </div>
+                <div class="panel-body">
+                    <span><i class="fa fa-barcode"></i>&nbsp;:&nbsp;01-0037</span> <br>
+                    <span><i class="fa fa-envelope-o"></i>&nbsp;:&nbsp;josephine.taojo@megamitch.com</span> <br>
+                    <span><i class="fa fa-calendar"></i>&nbsp;:&nbsp;2014-04-11</span> <br>
+                    <span><i class="fa fa-mobile fa-2x"></i>&nbsp;:&nbsp;0917-505-8928</span>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-sm-8 col-md-9 col-lg-9">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs nav-line">
-            <li class="active"><a href="#info" data-toggle="tab"><strong>My Info</strong></a></li>
-            <li><a href="#attendance" data-toggle="tab"><strong>Attendance</strong></a></li>
-            <li><a href="#ob" data-toggle="tab"><strong>OB Request</strong></a></li>
-            <li><a href="#leave" data-toggle="tab"><strong>Leave Request</strong></a></li>
-        </ul>
-        
-        <!-- Tab panes -->
-        <div class="tab-content nopadding noborder">
-            <div class="tab-pane active" id="info">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <h4>
-                            <strong>Personal Information:</strong>
-                        </h4>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-birthday-cake"></i></span>
-                            <input type="text" class="form-control" placeholder="1988-01-01"/>
-                            <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
-                            <input type="text" class="form-control" placeholder="0917-505-8928"/>
-                            <span class="input-group-addon"><i class="fa fa-heart"></i></span>
-                            <input type="text" class="form-control" placeholder="A+"/>
-                        </div>
-                        <div class="input-group">
-                             <span class="input-group-addon"><i class="fa fa-home"></i></span>
-                            <input type="text" class="form-control" placeholder="Zone Orchids Suarez Iligan City"/>
-                        </div>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
-                            <input type="text" class="form-control" placeholder="jtaojo@gmail.com"/>
-                        </div>
-                        <br>
-                        <h4>
-                            <strong>For Emergency</strong> <small>please contact:</small>
-                        </h4>
-                        <div class="input-group input-group-sm">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                            <input type="text" class="form-control" placeholder="Josephine Taojo"/>
-                            <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                            <input type="text" class="form-control" placeholder="0916-493-4483"/>
-                        </div>
-                        <div class="input-group  input-group-sm">
-                            <span class="input-group-addon"><i class="fa fa-home"></i></span>
-                            <input type="text" class="form-control" placeholder="Zone Orchids Suarez Iligan City"/>
-                        </div>
+        <div class="col-sm-8 col-md-9 col-lg-9">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs nav-line">
+                <li class="active"><a href="#info" data-toggle="tab"><strong>My Info</strong></a></li>
+                <li><a href="#attendance" data-toggle="tab"><strong>Attendance</strong></a></li>
+                <li><a href="#ob" data-toggle="tab"><strong>OB Request</strong></a></li>
+                <li><a href="#leave" data-toggle="tab"><strong>Leave Request</strong></a></li>
+            </ul>
 
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <h4>
-                            <strong>Government Issued Identification:</strong>
-                        </h4>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
-                            <input type="text" id="tin" class="form-control" placeholder="TIN: 289-975-14000"/>
-                            <input type="text" id="sss" class="form-control" placeholder="SSS: 08-1750705-5"/>
-                            <input type="text" id="pagibig" class="form-control" placeholder="Pag-ibig: 1211-1022-2292"/>
-                            <input type="text" id="philhealth" class="form-control" placeholder="PhilHealth: 15-025334681-9"/>
+            <!-- Tab panes -->
+            <div class="tab-content nopadding noborder">
+                <div class="tab-pane active" id="info">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <h4>
+                                <strong>Personal Information:</strong>
+                            </h4>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-birthday-cake"></i></span>
+                                <input type="text" class="form-control" placeholder="1988-01-01"/>
+                                <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+                                <input type="text" class="form-control" placeholder="0917-505-8928"/>
+                                <span class="input-group-addon"><i class="fa fa-heart"></i></span>
+                                <input type="text" class="form-control" placeholder="A+"/>
+                            </div>
+                            <div class="input-group">
+                                 <span class="input-group-addon"><i class="fa fa-home"></i></span>
+                                <input type="text" class="form-control" placeholder="Zone Orchids Suarez Iligan City"/>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                                <input type="text" class="form-control" placeholder="jtaojo@gmail.com"/>
+                            </div>
+                            <br>
+                            <h4>
+                                <strong>For Emergency</strong> <small>please contact:</small>
+                            </h4>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control" placeholder="Josephine Taojo"/>
+                                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                <input type="text" class="form-control" placeholder="0916-493-4483"/>
+                            </div>
+                            <div class="input-group  input-group-sm">
+                                <span class="input-group-addon"><i class="fa fa-home"></i></span>
+                                <input type="text" class="form-control" placeholder="Zone Orchids Suarez Iligan City"/>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <h4>
+                                <strong>Government Issued Identification:</strong>
+                            </h4>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                <input type="text" id="tin" class="form-control" placeholder="TIN: 289-975-14000"/>
+                                <input type="text" id="sss" class="form-control" placeholder="SSS: 08-1750705-5"/>
+                                <input type="text" id="pagibig" class="form-control" placeholder="Pag-ibig: 1211-1022-2292"/>
+                                <input type="text" id="philhealth" class="form-control" placeholder="PhilHealth: 15-025334681-9"/>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="tab-pane" id="attendance">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-xs-12">
-                        <p>
-                            Cras ultrices magna tristique, fringilla elit quis, condimentum neque. Etiam sagittis rutrum erat quis aliquam. Aenean in nulla quis quam tristique volutpat a sed felis. Nulla sollicitudin, lectus sed accumsan vehicula, eros magna viverra quam, eget imperdiet lacus sem nec lacus. Proin semper congue lacus, id consequat ex fringilla in. Praesent facilisis mi nec egestas efficitur. Cras sit amet felis mauris. Aenean luctus, eros in finibus aliquet, urna tortor viverra leo, sed ultricies ante quam quis mi. Sed purus ante, ultrices in tincidunt vitae, lobortis sit amet erat.
-                        </p>
+                <div class="tab-pane" id="attendance">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-xs-12">
+                            <p>
+                                Cras ultrices magna tristique, fringilla elit quis, condimentum neque. Etiam sagittis rutrum erat quis aliquam. Aenean in nulla quis quam tristique volutpat a sed felis. Nulla sollicitudin, lectus sed accumsan vehicula, eros magna viverra quam, eget imperdiet lacus sem nec lacus. Proin semper congue lacus, id consequat ex fringilla in. Praesent facilisis mi nec egestas efficitur. Cras sit amet felis mauris. Aenean luctus, eros in finibus aliquet, urna tortor viverra leo, sed ultricies ante quam quis mi. Sed purus ante, ultrices in tincidunt vitae, lobortis sit amet erat.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="tab-pane" id="ob">
-                
-            </div>
-            <div class="tab-pane" id="leave">
-                
+
+                <div class="tab-pane" id="ob">
+
+                </div>
+                <div class="tab-pane" id="leave">
+
+                </div>
             </div>
         </div>
     </div>

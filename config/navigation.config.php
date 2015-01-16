@@ -31,14 +31,22 @@ return [
                 'label' => 'Dashboard',
                 'route' =>  'mot',
                 'icon' => "fa fa-home"
-            ]
+            ],
+            'reporting' => [],
+            'manage-employee' => [],
+            'attendance' => [],
+            'OB' => []
         ],
         'sidebar' => [
             'dashboard' => [
                 'label' => 'Dashboard',
                 'route' =>  'mot',
                 'icon' => "fa fa-home"
-            ]
+            ],
+            'reporting' => [],
+            'manage-employee' => [],
+            'attendance' => [],
+            'OB' => []
         ],
         "header" => [
             "home" => [

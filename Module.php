@@ -28,7 +28,6 @@ namespace Mot;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
-use Zend\ModuleManager\ModuleManager;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\Feature\ControllerProviderInterface;
 use Zend\ModuleManager\Feature\ServiceProviderInterface;
@@ -46,8 +45,8 @@ class Module implements
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
         
-//        $serviceManager = $event->getApplication()->getServiceManager();
-//        $eventManager->attach($serviceManager->get('ZfcRbac\View\Strategy\RedirectStrategy'));
+        $serviceManager = $event->getApplication()->getServiceManager();
+        $eventManager->attach($serviceManager->get('ZfcRbac\View\Strategy\RedirectStrategy'));
     }
 
     public function getConfig()

@@ -38,15 +38,14 @@ return [
             'OB' => []
         ],
         'sidebar' => [
+            //DO NOT CHANGE THE SEQUENCE
             'dashboard' => [
                 'label' => 'Dashboard',
                 'route' =>  'mot',
                 'icon' => "fa fa-home"
             ],
-            'reporting' => [],
-            'manage-employee' => [],
-            'attendance' => [],
-            'OB' => []
+//            'mot-reports' => [],
+            'mot-users' => []
         ],
         "header" => [
             "home" => [

@@ -50,6 +50,16 @@ return [
                         ]
                     ]
                 ]
+            ],
+            'home' => [
+                'type'      => 'Literal',
+                'options'   => [
+                    'route'     => '/',
+                    'defaults'  => [
+                        'controller'    => 'Mot\Controller\Index',
+                        'action'        => 'index'
+                    ]
+                ]
             ]
         ]
     ]

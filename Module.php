@@ -3,7 +3,7 @@
 /**
  * The MIT License
  *
- * Copyright (c) 2012-2014, contributors of Mega Mitch Credit, Inc. software project.
+ * Copyright (c) 2012-2014, contributors of Mega Mitch, Inc. software project.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -47,7 +47,9 @@ class Module implements
         ];
         
         foreach ($configFiles as $configFile) {
-            $config = \Zend\Stdlib\ArrayUtils::merge($config, include  __DIR__ .'/config/'. $configFile);
+            $config = \Zend\Stdlib\ArrayUtils::merge(
+                        $config, include  __DIR__ .'/config/'. $configFile
+                    );
         }
 
         return $config;

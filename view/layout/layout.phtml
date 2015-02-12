@@ -1,8 +1,23 @@
 <?php 
-    /**
-     * DO NOT CHANGE CURRENT PATH SETTINGS IF NOT FAMILIAR
-     */
-    $path = $this->basePath();
+/**
+ * DO NOT CHANGE CURRENT PATH SETTINGS IF NOT FAMILIAR
+ */
+// CSS Stylesheets
+$favicon    = $this->basePath('img/favicon.ico');
+$style      = $this->basePath('assets/mot/css/style.default.css');
+$override   = $this->basePath('assets/mot/css/style.override.css');
+$faIcon     = $this->basePath('assets/font-awesome/css/font-awesome.css');
+$bootstrap  = $this->basePath('assets/bootstrap/css/bootstrap.min.css');
+$bsTheme    = $this->basePath('assets/bootstrap/css/bootstrap-theme.min.css');
+
+// JavaScripts
+$jquery     = $this->basePath('assets/jquery/jquery.min.js');
+$bsJS       = $this->basePath('assets/bootstrap/js/bootstrap.min.js');
+$popover    = $this->basePath('assets/bootstrap/js/popover.js');
+$tooltip    = $this->basePath('assets/bootstrap/js/tooltip.js');
+$tab        = $this->basePath('assets/bootstrap/js/tab.js');
+$holder     = $this->basePath('assets/mot/js/holder.js');
+$custom     = $this->basePath('assets/mot/js/custom.js');
 ?>
 
 <?php echo $this->doctype(); ?>
@@ -10,37 +25,28 @@
     <head>
         <meta charset="utf-8">
         <?php echo $this->headMeta()
-                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
-                ->appendName(
-                    'viewport',
-                    'width=device-width, initial-scale=1.0'
-                );
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0');
         ?>
         <?php echo $this->headTitle('Mega Mitch Office Tool')
             ->setSeparator(' - ')
             ->setAutoEscape(false);
         ?>
         <?php 
-            echo $this->headLink(
-                        [
-                            'rel' => 'shortcut icon',
-                            'href' => $path . '/img/favicon.ico'
-                        ]
-                )
-            ->prependStylesheet($path . '/assets/mot/css/style.override.css')
-            ->prependStylesheet($path . '/assets/mot/css/style.default.css')
-            ->prependStylesheet(
-                $path . '/assets/font-awesome/css/font-awesome.css'
-            )
-            ->prependStylesheet(
-                $path . '/assets/bootstrap/css/bootstrap-theme.min.css'
-            )
-            ->prependStylesheet(
-                $path . '/assets/bootstrap/css/bootstrap.min.css'
-            )
+            echo $this->headLink(['rel' => 'shortcut icon', 'href' => $favicon])
+                    ->prependStylesheet($override)
+                    ->prependStylesheet($style)
+                    ->prependStylesheet($faIcon)
+                    //->prependStylesheet($bsTheme)
+                    ->prependStylesheet($bootstrap)
         ?>
     </head>
     <body>
+        <?php 
+            if (!$this->zfcUserIdentity()) {
+                echo "<div class='container'>" . $this->content . "</div>";
+            } else {
+        ?>        
         <header>
              <?php echo $this->partial('partial/navigation/header'); ?>
         </header>
@@ -48,24 +54,27 @@
             <div class="mainwrapper">
                 <div class="leftpanel">
                     <?php 
-                        if($this->zfcUserIdentity()) {
-                            echo $this->partial('partial/navigation/sidebar');  
-                        }                        
+                        echo $this->partial('partial/navigation/sidebar');
                     ?>
                 </div>
                 <div class="mainpanel">
                     <?php echo $this->content; ?>
-                </div>                
+                </div>
+               
             </div>
-        </section>       
-        <?php echo $this->inlineScript()           
-            ->prependFile($path . '/assets/mot/js/custom.js')
-            ->prependFile($path . '/assets/mot/js/holder.js')
-            ->prependFile($path . '/assets/bootstrap/js/tab.js')
-            ->prependFile($path . '/assets/bootstrap/js/tooltip.js')
-            ->prependFile($path . '/assets/bootstrap/js/popover.js')
-            ->prependFile($path . '/assets/bootstrap/js/bootstrap.min.js')
-            ->prependFile($path . '/assets/jquery/jquery.min.js');
+        </section>
+        <?php
+            }
+        ?>
+        <?php 
+            echo $this->inlineScript() //prepend up here
+                    ->prependFile($custom) 
+                    ->prependFile($holder)
+                    ->prependFile($tab)
+                    ->prependFile($tooltip)
+                    ->prependFile($popover)
+                    ->prependFile($bsJS)
+                    ->prependFile($jquery);
         ?>
     </body>
 </html>

@@ -1,18 +1,20 @@
 <div class="media profile-left">
-    <a class="pull-left profile-thumb" 
-       href="<?php echo $this->url('mot/profile');?>">
-        <img class="img-circle" 
-             src="<?php //echo $this->zfcUserIdentity()->getAvatar();?>" 
+    <a class="pull-left profile-thumb tooltips" 
+       href="<?php echo $this->url('mot/profile');?>"
+       data-placement="bottom"
+        data-toogle="tooltip"
+        title="view profile"
+    >
+        <img class="img-responsive img-circle"
+             src="<?php echo $this->zfcUserIdentity()->getAvatar();?>" 
         >
     </a>
-    <div class="media-body">
+    <div class="media-body" style="padding-left: 5px;">
         <h4 class="media-heading">
-            <a href="<?php echo $this->url('mot/profile'); ?>">
-            &nbsp;&nbsp;<?php echo $this->zfcUserIdentity()->getUsername(); ?>
-            </a>
+            <?php echo $this->zfcUserIdentity()->getDisplayName();?>
         </h4>
         <small class="text-muted">
-            &nbsp;&nbsp;<?php //echo $this->zfcUserIdentity()->getPosition();?>
+            <?php echo $this->zfcUserIdentity()->getPosition();?>
         </small>
     </div>
 </div>

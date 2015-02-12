@@ -36,17 +36,16 @@
     <div class="row">
         <div class="col-sm-4 col-md-3 col-lg-3">
             <div class="text-center">
-                <img class="img-circle 
-                        image-offline 
-                        image-responsive 
-                        img-profile" 
-                    width="180" height="180" 
-                    src="<?php //echo $this->zfcUserIdentity()->getAvatar();?>" 
+                <img class="image-responsive img-thumbnail img-profile" 
+                    src="<?php echo $this->zfcUserIdentity()->getAvatar();?>" 
                     alt="profile-picture"/>
                 <h4 class="profile-name mb5">
-                    <strong>Taojo,</strong> Josephine Dalangin
+                    <strong>
+                        <?php echo $this->zfcUserIdentity()->getLastName();?>,
+                    </strong>
+                    <?php echo $this->zfcUserIdentity()->getGivenName();?>
                 </h4>
-                <div>Executive Assistant</div>
+                <div><?php echo $this->zfcUserIdentity()->getPosition();?></div>
             </div>
             <div class="mb20"></div>
             <div class="panel panel-success">
@@ -56,23 +55,32 @@
                     </h6>
                 </div>
                 <div class="panel-body">
-                    <span>
+                    <span class="tooltips" 
+                          title="Employee ID" 
+                          data-placement="left">
                         <i class="fa fa-barcode"></i>
-                        &nbsp;:&nbsp;01-0037
+                        &nbsp;:&nbsp;
+                        <?php echo $this->zfcUserIdentity()->getEmployeeId();?>
                     </span> 
                     <br>
-                    <span>
+                    <span class="tooltips" 
+                          title="Email Address" 
+                          data-placement="left">
                         <i class="fa fa-envelope-o"></i>
                         &nbsp;:&nbsp;
                         <?php echo $this->zfcUserIdentity()->getEmail();?>
                     </span>
                     <br>
-                    <span>
+                    <span class="tooltips" 
+                          title="Date Hired" 
+                          data-placement="left">
                         <i class="fa fa-calendar"></i>
                         &nbsp;:&nbsp;2014-04-11
                     </span>
                     <br>
-                    <span>
+                    <span class="tooltips" 
+                          title="Mobile Number" 
+                          data-placement="left">
                         <i class="fa fa-mobile fa-2x"></i>
                         &nbsp;:&nbsp;0917-505-8928
                     </span>
@@ -106,7 +114,7 @@
             <!-- Tab panes -->
             <div class="tab-content nopadding noborder">
                 <div class="tab-pane active" id="info">
-                    <div class="row">
+<!--                    <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <h4>
                                 <strong>Personal Information:</strong>
@@ -212,7 +220,7 @@
                                 />
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="tab-pane" id="attendance">
                     <div class="row">

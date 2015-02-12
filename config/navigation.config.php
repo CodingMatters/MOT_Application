@@ -44,7 +44,7 @@ return [
                 'route' =>  'mot',
                 'icon' => "fa fa-home"
             ],
-//            'mot-reports' => [],
+            'mot-reports' => [],
             'mot-users' => []
         ],
         "header" => [

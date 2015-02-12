@@ -16,3 +16,11 @@
     box-shadow: 0 3px 0 #B1D978;
     margin: 0;
 }
+
+.headerwrapper .header-right a {
+    color: #fff;    
+}
+
+.headerwrapper .header-right a:hover {
+    color: #C0E683;    
+}

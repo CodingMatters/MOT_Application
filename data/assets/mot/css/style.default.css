@@ -41,7 +41,6 @@ a:focus {
     min-height: 60px;
     padding: 14px 15px;
     float: left;
-    border-right: 1px solid rgba(255,255,255,0.14);
     background-color: rgba(0,0,0,0.03);
     position: relative;
 }
@@ -329,7 +328,6 @@ a:focus {
     top: 0;
     left: 0;
     width: 230px;
-    border-right: 1px solid #e7e7e7;
 }
 
 .mainwrapper:after {

@@ -1,27 +1,45 @@
 <div class="pageheader">
-     <div class="media">
-         <div class="pageicon pull-left">
-             <i class="fa fa-users"></i>
-         </div>
-         <div class="media-body"  style="padding-left: 5px">
-             <ul class="breadcrumb">
-                 <li>
-                     <a href="#"><i class="glyphicon glyphicon-home"></i></a>
-                 </li>
-                 <li>All Employee</li>
-             </ul>
-             <h4>All Employee</h4>
-         </div>
-     </div>
+    <div class="media">
+        <div class="pageicon pull-left">
+            <i class="fa fa-users"></i>
+        </div>
+        <div class="media-body"  style="padding-left: 5px">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="<?php echo $this->url('mot');?>">
+                        <i class="glyphicon glyphicon-home"></i>
+                    </a>
+                </li>
+                <li>All Employee</li>
+            </ul>
+            <h4>All Employee</h4>
+        </div>
+    </div>
 </div>
 <div class="contentpanel">
     <div class="row">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs nav-line">
-            <li class="active"><a href="#all" data-toggle="tab"><strong>All Employee</strong></a></li>
-            <li><a href="#iligan" data-toggle="tab"><strong>Iligan Branch</strong></a></li>
-            <li><a href="#lugait" data-toggle="tab"><strong>Lugait Branch</strong></a></li>
-            <li><a href="#initao" data-toggle="tab"><strong>Initao Branch</strong></a></li>
+            <li class="active">
+                <a href="#all" data-toggle="tab">
+                    <strong>All Employee</strong>
+                </a>
+            </li>
+            <li>
+                <a href="#iligan" data-toggle="tab">
+                    <strong>Iligan Branch</strong>
+                </a>
+            </li>
+            <li>
+                <a href="#lugait" data-toggle="tab">
+                    <strong>Lugait Branch</strong>
+                </a>
+            </li>
+            <li>
+                <a href="#initao" data-toggle="tab">
+                    <strong>Initao Branch</strong>
+                </a>
+            </li>
         </ul>
 
         <div class="tab-content nopadding noborder">
@@ -56,9 +74,36 @@
                     </span>
                     <div class="divider"><br></div>
                 </div>
-            </div>
-
-            <div class="tab-pane active" id="iligan">
+                <div class="col-lg-3 col-sm-3 text-center">
+                    <img class="img-circle image-responsive center-block" width="180" height="180" src="<?php echo $this->basePath(). "/assets/webarch/img/profile-pic-big.png";?>"/>
+                    <h4>
+                        <a href="<?php echo $this->url('mot/profile', []); ?>">
+                            <strong>Alavanza</strong>, Ella Mae Amor
+                        </a>
+                        <br> 
+                        <small>Junior Credit Officer</small>
+                    </h4>
+                    <span class="text-extra-small">
+                        <i class="fa fa-phone-square">&nbsp;09170000001</i> <br>
+                        <i class="fa fa-envelope">&nbsp;ellamaeamor.alavanza@megamitch.com</i>
+                    </span>
+                    <div class="divider"><br></div>
+                </div>
+                <div class="col-lg-3 col-sm-3 text-center">
+                    <img class="img-circle image-responsive center-block" width="180" height="180" src="<?php echo $this->basePath(). "/assets/webarch/img/profile-pic-big.png";?>"/>
+                    <h4>
+                        <a href="<?php echo $this->url('mot/profile', []); ?>">
+                            <strong>Alavanza</strong>, Ella Mae Amor
+                        </a>
+                        <br> 
+                        <small>Junior Credit Officer</small>
+                    </h4>
+                    <span class="text-extra-small">
+                        <i class="fa fa-phone-square">&nbsp;09170000001</i> <br>
+                        <i class="fa fa-envelope">&nbsp;ellamaeamor.alavanza@megamitch.com</i>
+                    </span>
+                    <div class="divider"><br></div>
+                </div>
                 <div class="col-lg-3 col-sm-3 text-center">
                     <img class="img-circle image-responsive center-block" width="180" height="180" src="<?php echo $this->basePath(). "/assets/webarch/img/profile-pic-big.png";?>"/>
                     <h4>
@@ -91,8 +136,7 @@
                 </div>
             </div>
 
-
-            <div class="tab-pane active" id="lugait">
+            <div class="tab-pane" id="iligan">
                 <div class="col-lg-3 col-sm-3 text-center">
                     <img class="img-circle image-responsive center-block" width="180" height="180" src="<?php echo $this->basePath(). "/assets/webarch/img/profile-pic-big.png";?>"/>
                     <h4>
@@ -126,7 +170,41 @@
             </div>
 
 
-            <div class="tab-pane active" id="initao">
+            <div class="tab-pane" id="lugait">
+                <div class="col-lg-3 col-sm-3 text-center">
+                    <img class="img-circle image-responsive center-block" width="180" height="180" src="<?php echo $this->basePath(). "/assets/webarch/img/profile-pic-big.png";?>"/>
+                    <h4>
+                        <a href="<?php echo $this->url('mot/profile', []); ?>">
+                            <strong>Alavanza</strong>, Ella Mae Amor
+                        </a>
+                        <br> 
+                        <small>Junior Credit Officer</small>
+                    </h4>
+                    <span class="text-extra-small">
+                        <i class="fa fa-phone-square">&nbsp;09170000001</i> <br>
+                        <i class="fa fa-envelope">&nbsp;ellamaeamor.alavanza@megamitch.com</i>
+                    </span>
+                    <div class="divider"><br></div>
+                </div>
+                <div class="col-lg-3 col-sm-3 text-center">
+                    <img class="img-circle image-responsive center-block" width="180" height="180" src="<?php echo $this->basePath(). "/assets/webarch/img/profile-pic-big.png";?>"/>
+                    <h4>
+                        <a href="<?php echo $this->url('mot/profile', []); ?>">
+                            <strong>Alavanza</strong>, Ella Mae Amor
+                        </a>
+                        <br> 
+                        <small>Junior Credit Officer</small>
+                    </h4>
+                    <span class="text-extra-small">
+                        <i class="fa fa-phone-square">&nbsp;09170000001</i> <br>
+                        <i class="fa fa-envelope">&nbsp;ellamaeamor.alavanza@megamitch.com</i>
+                    </span>
+                    <div class="divider"><br></div>
+                </div>
+            </div>
+
+
+            <div class="tab-pane" id="initao">
                 <div class="col-lg-3 col-sm-3 text-center">
                     <img class="img-circle image-responsive center-block" width="180" height="180" src="<?php echo $this->basePath(). "/assets/webarch/img/profile-pic-big.png";?>"/>
                     <h4>

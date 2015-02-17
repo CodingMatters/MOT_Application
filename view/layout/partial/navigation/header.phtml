@@ -1,27 +1,47 @@
+<?php
+    /**
+    * DO NOT CHANGE CURRENT PATH SETTINGS IF NOT FAMILIAR
+    */
+    $logo = $this->basePath("/assets/mot/img/mot-logo.png");
+?>
+
 <div class="headerwrapper">
     <div class="header-left">
-        <a href="<?php echo $this->url('mot'); ?>"><img src="<?php echo $this->basePath(). "/assets/mot/img/mot-logo.png";?>" class="logo" alt=""  data-src="<?php echo $this->basePath(). "/assets/mot/img/mot-logo.png";?>" data-src-retina="<?php echo $this->basePath(). "/assets/mot/img/mot-logo.png";?>" width="92" height="20"/></a>
+        <a href="<?php echo $this->url('mot'); ?>">
+            <img src="<?php echo $logo; ?>" 
+                class="logo" alt="logo"                               
+                width="92" height="20"/>
+        </a>
+        <?php if($this->zfcUserIdentity()) : ?>
         <div class="pull-right">
-            <a href="#" class="menu-collapse">
+            <a class="menu-collapse tooltips" data-placement="right"
+               data-toogle="tooltip"
+               title="click to scale menu"
+            >
                 <i class="fa fa-bars"></i>
             </a>
         </div>
+        <?php endif; ?>
     </div>
     <div class="header-right">
          <div class="pull-left">
             <?php 
-//                echo $this->navigation("header")->menu()->setPartial("template/navigation/header");
+//                echo $this->navigation("header")
+//                      ->menu()->setPartial("template/navigation/header");
             ?>
         </div>
         <div class="pull-right">
-            <div class="btn-group btn-group-option">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-lock"></i>
-                </button>               
-                <ul class="dropdown-menu pull-right" role="menu">
-                  <li><a href="<?php echo $this->url("zfcuser/logout"); ?>"><i class="glyphicon glyphicon-log-out"></i>Sign Out</a></li>
-                </ul>
+            <?php if($this->zfcUserIdentity()) : ?>
+            <div class="logout-button">
+                <a class="btn btn-toolbar btn-dark tooltips" 
+                    href="<?php echo $this->url("zfcuser/logout"); ?>"
+                    data-toggle="tooltip" 
+                    data-placement="left" 
+                    title="logout">
+                    <i class="fa fa-sign-out"></i>
+                </a>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 </div>
